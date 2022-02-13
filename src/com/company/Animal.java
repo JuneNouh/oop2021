@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devices.FoodType;
+
 public class Animal {
     final static Double DEFAULT_DOG_WEIGHT = 6.0;
     private static final Double DEFAULT_FOOD_WEIGHT = 1.0;
@@ -9,6 +11,7 @@ public class Animal {
     final static Double DEFAULT_WEIGHT = 0.5;
     public final String species;
     private Double weight;
+    public FoodType os;
 
     public Animal(String species) {
         this.species = species;
@@ -28,6 +31,20 @@ public class Animal {
         }
 
     }
+
+    public void food() {
+
+
+        switch (this.os) {
+            case meet -> System.out.println(" 50% mass of food will be built into body mass");
+            case crops -> System.out.println(" 50% mass of food will be built into body mass");
+            case all -> System.out.println(" 50% mass of food will be built into body mass");
+
+        }
+
+    }
+
+
 
     void printWeight() {
         System.out.println(weight);
